@@ -219,12 +219,23 @@ html[dark] #surr-search input { color: #f1f1f1; }
   // Pure CSS hover effects keep working.
   const THUMBNAIL_ITEMS = [
     "ytd-thumbnail",
+    "yt-thumbnail-view-model",
     "ytd-rich-item-renderer",
+    "ytd-rich-grid-media",
     "ytd-video-renderer",
     "ytd-grid-video-renderer",
     "ytd-compact-video-renderer",
     "ytd-playlist-video-renderer",
+    "ytd-playlist-panel-video-renderer",
     "yt-lockup-view-model",
+    // Shorts use their own elements
+    "ytd-reel-item-renderer",
+    "ytd-reel-shelf-renderer",
+    "ytm-shorts-lockup-view-model",
+    "ytm-shorts-lockup-view-model-v2",
+    // Catch-all: any link to a video
+    'a[href*="/shorts/"]',
+    'a[href*="/watch"]',
   ].join(", ");
 
   for (const type of ["mouseover", "mouseenter", "mousemove", "pointerover", "pointerenter", "pointermove"]) {
